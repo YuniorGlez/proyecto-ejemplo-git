@@ -1,0 +1,6 @@
+{
+  "name": "Git para Novatos",
+  "description": "Una plataforma interactiva con simulador visual y tutor de IA para aprender Git desde cero de forma sencilla.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
