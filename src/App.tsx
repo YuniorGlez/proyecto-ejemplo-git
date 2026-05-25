@@ -516,7 +516,7 @@ export default function App() {
                   BETA
                 </span>
                 <h1 className="font-sans font-bold text-lg text-slate-950 tracking-tight leading-none">
-                  Git para Novatos
+                  Aprende git como un Yunior
                 </h1>
               </div>
               <p className="text-xs text-slate-500 font-sans mt-1">
@@ -620,7 +620,7 @@ export default function App() {
             <span>Creado para empoderar a nuevos desarrolladores de software.</span>
           </div>
           <div>
-            <span>Git para Novatos • 2026</span>
+            <span>Aprende git como un Yunior • 2026</span>
           </div>
         </div>
       </footer>
