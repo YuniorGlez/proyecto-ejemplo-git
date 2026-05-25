@@ -67,7 +67,7 @@ export default function TerminalSim({ history, onCommand }: TerminalSimProps) {
             <button
               key={cmd}
               onClick={() => handleQuickCommand(cmd)}
-              className="text-[10px] font-mono font-semibold px-2 py-0.5 bg-slate-700 text-slate-200 hover:bg-indigo-600 hover:text-white rounded border border-slate-600 transition-colors select-none shrink-0"
+              className="text-[10px] font-mono font-semibold px-2 py-0.5 bg-slate-700 text-slate-200 hover:bg-emerald-600 hover:text-white rounded border border-slate-600 transition-colors select-none shrink-0"
             >
               {cmd}
             </button>
@@ -83,7 +83,7 @@ export default function TerminalSim({ history, onCommand }: TerminalSimProps) {
         
         {history.map((line, idx) => {
           let color = "text-slate-300";
-          if (line.type === "command") color = "text-indigo-400 font-bold";
+          if (line.type === "command") color = "text-emerald-400 font-bold";
           else if (line.type === "error") color = "text-red-400";
           else if (line.type === "success") color = "text-green-400 font-semibold";
           else if (line.type === "info") color = "text-cyan-400";
@@ -118,7 +118,7 @@ export default function TerminalSim({ history, onCommand }: TerminalSimProps) {
         />
         <button
           type="submit"
-          className="p-1 px-3 bg-indigo-600 hover:bg-indigo-700 text-white font-sans text-xs font-semibold rounded-lg flex items-center gap-1 transition-colors shrink-0 cursor-pointer"
+          className="p-1 px-3 bg-emerald-600 hover:bg-emerald-700 text-white font-sans text-xs font-semibold rounded-lg flex items-center gap-1 transition-colors shrink-0 cursor-pointer"
         >
           Enviar
           <Send className="w-3 h-3" />

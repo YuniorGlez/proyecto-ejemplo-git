@@ -500,19 +500,19 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-100 flex flex-col font-sans text-slate-900 selection:bg-indigo-100 selection:text-indigo-900">
+    <div className="min-h-screen bg-slate-100 flex flex-col font-sans text-slate-900 selection:bg-emerald-100 selection:text-emerald-900">
       
       {/* Top Main Navigation Header */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-40 px-4 py-3.5 sm:px-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
           
           <div className="flex items-center gap-3">
-            <div className="p-2.5 bg-indigo-600 text-white rounded-2xl shadow-md transform hover:rotate-6 transition-transform">
-              <GitPullRequest className="w-5 h-5 text-indigo-50" />
+            <div className="p-2.5 bg-emerald-600 text-white rounded-2xl shadow-md transform hover:rotate-6 transition-transform">
+              <GitPullRequest className="w-5 h-5 text-emerald-50" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-mono text-xs font-black text-white bg-indigo-600 px-1.5 py-0.5 rounded uppercase tracking-wider scale-95 select-none">
+                <span className="font-mono text-xs font-black text-white bg-emerald-600 px-1.5 py-0.5 rounded uppercase tracking-wider scale-95 select-none">
                   BETA
                 </span>
                 <h1 className="font-sans font-bold text-lg text-slate-950 tracking-tight leading-none">
@@ -536,16 +536,16 @@ export default function App() {
       </header>
 
       {/* Hero section */}
-      <div className="bg-indigo-900 text-indigo-100 p-6 sm:p-8 text-center relative overflow-hidden shrink-0 select-none">
-        <div className="absolute inset-0 bg-radial from-transparent to-indigo-950/70 pointer-events-none" />
+      <div className="bg-emerald-900 text-emerald-100 p-6 sm:p-8 text-center relative overflow-hidden shrink-0 select-none">
+        <div className="absolute inset-0 bg-radial from-transparent to-emerald-950/70 pointer-events-none" />
         <div className="max-w-3xl mx-auto relative z-10 space-y-3">
-          <span className="px-2.5 py-1 bg-indigo-500/30 text-indigo-200 text-xs font-semibold rounded-full uppercase tracking-wider">
+          <span className="px-2.5 py-1 bg-emerald-500/30 text-emerald-200 text-xs font-semibold rounded-full uppercase tracking-wider">
             ¡De cero a héroe de Git!
           </span>
           <h2 className="text-2xl sm:text-3xl font-sans font-bold tracking-tight text-white leading-tight">
             ¿Confundido con la terminal? Visualiza lo que sucede detrás.
           </h2>
-          <p className="text-xs sm:text-sm text-indigo-200/95 max-w-xl mx-auto leading-relaxed">
+          <p className="text-xs sm:text-sm text-emerald-200/95 max-w-xl mx-auto leading-relaxed">
             Realiza cambios, agrégalos a tu mesa de preparación (Staging) y tómales fotos (Commits). ¡Cualquier paso interactivo actualizará la consola y viceversa!
           </p>
         </div>
@@ -616,7 +616,7 @@ export default function App() {
       <footer className="bg-white border-t border-slate-200 text-center py-6 mt-12 px-4 shrink-0 select-none">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500 font-sans">
           <div className="flex items-center gap-1.5 justify-center">
-            <Code className="w-4 h-4 text-indigo-600" />
+            <Code className="w-4 h-4 text-emerald-600" />
             <span>Creado para empoderar a nuevos desarrolladores de software.</span>
           </div>
           <div>

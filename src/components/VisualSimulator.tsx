@@ -101,12 +101,12 @@ export default function VisualSimulator({
       <div className="bg-white p-4 border border-gray-100 rounded-2xl shadow-xs flex flex-wrap justify-between items-center gap-4">
         <div className="flex items-center gap-3">
           <span className="p-2 bg-slate-100 text-slate-700 rounded-xl">
-            <GitBranch className="w-5 h-5 text-indigo-600" />
+            <GitBranch className="w-5 h-5 text-emerald-600" />
           </span>
           <div>
             <span className="text-[10px] font-mono font-bold text-slate-400 block uppercase tracking-wider">Rama Activa</span>
             <div className="flex items-center gap-2">
-              <span className="text-slate-800 font-mono font-bold text-sm bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded border border-indigo-100">
+              <span className="text-slate-800 font-mono font-bold text-sm bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded border border-emerald-100">
                 {currentBranch}
               </span>
               <select 
@@ -127,7 +127,7 @@ export default function VisualSimulator({
           {!isInitialized ? (
             <button
               onClick={onInitialize}
-              className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-sans text-sm font-semibold rounded-xl flex items-center gap-2 transition-smooth shadow-sm cursor-pointer"
+              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-sans text-sm font-semibold rounded-xl flex items-center gap-2 transition-smooth shadow-sm cursor-pointer"
             >
               <Zap className="w-4 h-4 fill-white" />
               Inicializar Repo (git init)
@@ -138,7 +138,7 @@ export default function VisualSimulator({
                 onClick={() => setShowNewFileForm(!showNewFileForm)}
                 className="px-3 py-1.5 border border-slate-200 text-slate-700 hover:bg-slate-50 font-sans text-xs rounded-lg flex items-center gap-1.5 transition-colors"
               >
-                <Plus className="w-3.5 h-3.5 text-indigo-600" />
+                <Plus className="w-3.5 h-3.5 text-emerald-600" />
                 Crear Archivo
               </button>
 
@@ -146,7 +146,7 @@ export default function VisualSimulator({
                 onClick={() => setShowNewBranchForm(!showNewBranchForm)}
                 className="px-3 py-1.5 border border-slate-200 text-slate-700 hover:bg-slate-50 font-sans text-xs rounded-lg flex items-center gap-1.5 transition-colors"
               >
-                <GitBranch className="w-3.5 h-3.5 text-indigo-600" />
+                <GitBranch className="w-3.5 h-3.5 text-emerald-600" />
                 Crear Rama (-b)
               </button>
             </>
@@ -165,7 +165,7 @@ export default function VisualSimulator({
               placeholder="ejemplo.html"
               value={newFileName}
               onChange={(e) => setNewFileName(e.target.value)}
-              className="w-full text-sm font-mono bg-white border border-amber-200 rounded-lg px-3 py-1.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500"
+              className="w-full text-sm font-mono bg-white border border-amber-200 rounded-lg px-3 py-1.5 focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
             />
           </div>
           <div className="flex gap-2 self-end">
@@ -178,7 +178,7 @@ export default function VisualSimulator({
             </button>
             <button
               type="submit"
-              className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-sans font-semibold rounded-lg shadow-sm"
+              className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-sans font-semibold rounded-lg shadow-sm"
             >
               Crear
             </button>
@@ -188,29 +188,29 @@ export default function VisualSimulator({
 
       {/* New Branch Trigger Form Pop-up / Overlay in-situ */}
       {showNewBranchForm && (
-        <form onSubmit={handleCreateBranchSubmit} className="bg-sky-50/70 border border-sky-200 p-4 rounded-xl flex items-center gap-3 transition-all">
+        <form onSubmit={handleCreateBranchSubmit} className="bg-green-50/70 border border-green-200 p-4 rounded-xl flex items-center gap-3 transition-all">
           <div className="flex-1">
-            <label className="block text-xs font-sans text-sky-900 font-semibold mb-1">Nombre de la nueva rama (rama paralela):</label>
+            <label className="block text-xs font-sans text-green-900 font-semibold mb-1">Nombre de la nueva rama (rama paralela):</label>
             <input
               type="text"
               required
               placeholder="feature-diseño"
               value={newBranchName}
               onChange={(e) => setNewBranchName(e.target.value)}
-              className="w-full text-sm font-mono bg-white border border-sky-200 rounded-lg px-3 py-1.5 focus:outline-hidden focus:ring-2 focus:ring-indigo-500"
+              className="w-full text-sm font-mono bg-white border border-green-200 rounded-lg px-3 py-1.5 focus:outline-hidden focus:ring-2 focus:ring-emerald-500"
             />
           </div>
           <div className="flex gap-2 self-end">
             <button
               type="button"
               onClick={() => { setShowNewBranchForm(false); setNewBranchName(""); }}
-              className="px-3 py-1.5 text-xs font-sans hover:bg-sky-100 rounded-lg text-sky-900"
+              className="px-3 py-1.5 text-xs font-sans hover:bg-green-100 rounded-lg text-green-900"
             >
               Cancelar
             </button>
             <button
               type="submit"
-              className="px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-sans font-semibold rounded-lg shadow-sm"
+              className="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-sans font-semibold rounded-lg shadow-sm"
             >
               Crear Rama
             </button>
@@ -231,7 +231,7 @@ export default function VisualSimulator({
           </div>
           <button
             onClick={onInitialize}
-            className="px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 text-white rounded-xl text-sm font-semibold flex items-center gap-2 shadow-sm cursor-pointer"
+            className="px-5 py-2.5 bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 text-white rounded-xl text-sm font-semibold flex items-center gap-2 shadow-sm cursor-pointer"
           >
             <Zap className="w-4 h-4 fill-white" />
             Inicializar Git Ahora
@@ -261,7 +261,7 @@ export default function VisualSimulator({
                     <p className="text-xs text-slate-400 font-sans mt-2">No hay cambios pendientes.</p>
                     <button
                       onClick={() => onAddFile(`archivo-${files.length + 1}.js`)}
-                      className="mt-3 text-xs text-indigo-600 font-semibold font-sans hover:underline flex items-center gap-1 mx-auto"
+                      className="mt-3 text-xs text-emerald-600 font-semibold font-sans hover:underline flex items-center gap-1 mx-auto"
                     >
                       <Plus className="w-3 h-3" /> Crear archivo rápido
                     </button>
@@ -312,7 +312,7 @@ export default function VisualSimulator({
                         <button
                           onClick={() => onStageFile(file.name)}
                           title="Preparar cambio (git add)"
-                          className="p-1 bg-indigo-50 text-indigo-600 hover:bg-indigo-100 rounded ml-1"
+                          className="p-1 bg-emerald-50 text-emerald-600 hover:bg-emerald-100 rounded ml-1"
                         >
                           <ChevronRight className="w-4 h-4" />
                         </button>
@@ -325,7 +325,7 @@ export default function VisualSimulator({
               {workingFiles.length > 0 && (
                 <button
                   onClick={onStageAll}
-                  className="w-full py-1.5 border border-dashed border-indigo-200 hover:border-indigo-400 text-indigo-700 hover:bg-indigo-50 font-sans text-xs font-semibold rounded-lg text-center transition-colors cursor-pointer"
+                  className="w-full py-1.5 border border-dashed border-emerald-200 hover:border-emerald-400 text-emerald-700 hover:bg-emerald-50 font-sans text-xs font-semibold rounded-lg text-center transition-colors cursor-pointer"
                 >
                   Preparar Todos (git add .)
                 </button>
@@ -400,7 +400,7 @@ export default function VisualSimulator({
                     placeholder="Mensaje de confirmación..."
                     value={commitMsg}
                     onChange={(e) => setCommitMsg(e.target.value)}
-                    className="w-full text-xs font-sans border border-slate-200 rounded-lg px-2.5 py-1.5 focus:outline-hidden focus:ring-1 focus:ring-indigo-500 bg-white"
+                    className="w-full text-xs font-sans border border-slate-200 rounded-lg px-2.5 py-1.5 focus:outline-hidden focus:ring-1 focus:ring-emerald-500 bg-white"
                   />
                   <button
                     type="submit"
@@ -418,7 +418,7 @@ export default function VisualSimulator({
           <div className="flex flex-col bg-white border border-slate-100 rounded-2xl shadow-xs overflow-hidden">
             <div className="p-4 bg-slate-50 border-b border-gray-100 flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <Database className="w-4 h-4 text-indigo-600" />
+                <Database className="w-4 h-4 text-emerald-600" />
                 <span className="font-sans font-semibold text-sm text-slate-800">3. Repositorio Local</span>
               </div>
               <span className="text-[10px] font-mono bg-slate-200 text-slate-700 font-bold px-1.5 py-0.5 rounded-full">
@@ -447,7 +447,7 @@ export default function VisualSimulator({
                         onClick={() => setSelectedCommit(isSelected ? null : node)}
                         className={`p-3 rounded-xl border transition-all cursor-pointer ${
                           isSelected 
-                            ? "border-indigo-600 bg-indigo-50/40 shadow-xs" 
+                            ? "border-emerald-600 bg-emerald-50/40 shadow-xs" 
                             : isHead 
                               ? "border-slate-300 bg-slate-50 hover:bg-slate-100" 
                               : "border-slate-1 w-full hover:bg-slate-50"
@@ -455,7 +455,7 @@ export default function VisualSimulator({
                       >
                         <div className="flex justify-between items-start">
                           <div className="flex items-center gap-2">
-                            <span className="w-2.5 h-2.5 rounded-full bg-indigo-600 pulse-glow flex shrink-0" />
+                            <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 pulse-glow flex shrink-0" />
                             <span className="font-mono text-xs font-bold text-slate-800 line-clamp-1">
                               {node.message}
                             </span>
@@ -477,7 +477,7 @@ export default function VisualSimulator({
                             <span className="text-[8px] font-mono px-1 bg-amber-100 text-amber-800 rounded font-bold uppercase tracking-wider">
                               HEAD
                             </span>
-                            <span className="text-[8px] font-mono px-1 bg-indigo-100 text-indigo-800 rounded font-bold uppercase tracking-wider">
+                            <span className="text-[8px] font-mono px-1 bg-emerald-100 text-emerald-800 rounded font-bold uppercase tracking-wider">
                               {node.branch}
                             </span>
                           </div>
@@ -505,9 +505,9 @@ export default function VisualSimulator({
                 <div className="pt-2 border-t border-slate-100">
                   <button
                     onClick={onPush}
-                    className="w-full py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-sans text-xs font-semibold rounded-lg flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                    className="w-full py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-sans text-xs font-semibold rounded-lg flex items-center justify-center gap-2 transition-colors cursor-pointer"
                   >
-                    <Globe className="w-3.5 h-3.5 text-indigo-200" />
+                    <Globe className="w-3.5 h-3.5 text-emerald-200" />
                     Subir cambios a GitHub (git push)
                   </button>
                 </div>
@@ -522,8 +522,8 @@ export default function VisualSimulator({
       {isInitialized && commits.length > 0 && (
         <div className="bg-slate-50/70 p-4 border border-slate-200 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-3">
-            <span className="p-2.5 bg-indigo-50 text-indigo-700 rounded-2xl">
-              <Globe className="w-6 h-6 text-indigo-600" />
+            <span className="p-2.5 bg-emerald-50 text-emerald-700 rounded-2xl">
+              <Globe className="w-6 h-6 text-emerald-600" />
             </span>
             <div>
               <h4 className="font-sans font-semibold text-slate-800 text-sm flex items-center gap-2">
@@ -555,7 +555,7 @@ export default function VisualSimulator({
                 <div 
                   key={rc.sha} 
                   title={`Commit en GitHub: ${rc.message}`}
-                  className="w-6 h-6 rounded-full bg-indigo-600 text-[10px] text-white font-mono font-bold flex items-center justify-center border-2 border-white uppercase"
+                  className="w-6 h-6 rounded-full bg-emerald-600 text-[10px] text-white font-mono font-bold flex items-center justify-center border-2 border-white uppercase"
                 >
                   {rc.sha.slice(0, 2)}
                 </div>
