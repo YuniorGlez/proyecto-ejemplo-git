@@ -42,9 +42,9 @@ export default function GitAIAssistant({
   return (
     <div className="flex flex-col h-full bg-white border border-gray-100 rounded-2xl shadow-sm overflow-hidden" id="git-ai-assistant">
       {/* Title Header */}
-      <div className="p-5 border-b border-gray-100 bg-linear-to-r from-indigo-50/50 to-white flex items-center justify-between">
+      <div className="p-5 border-b border-gray-100 bg-linear-to-r from-emerald-50/50 to-white flex items-center justify-between">
         <div className="flex items-center gap-2.5">
-          <span className="p-2 bg-indigo-50 text-indigo-600 rounded-xl relative">
+          <span className="p-2 bg-emerald-50 text-emerald-600 rounded-xl relative">
             <Cpu className="w-5 h-5" />
             <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white" />
           </span>
@@ -70,7 +70,7 @@ export default function GitAIAssistant({
               key={q}
               onClick={() => handleQuickQuestion(q)}
               disabled={isLoading}
-              className="text-[10px] sm:text-xs font-sans px-2.5 py-1 text-slate-600 hover:text-indigo-700 hover:bg-white bg-slate-100 rounded-lg border border-slate-200 transition-colors disabled:opacity-50 text-left shrink-0 cursor-pointer"
+              className="text-[10px] sm:text-xs font-sans px-2.5 py-1 text-slate-600 hover:text-emerald-700 hover:bg-white bg-slate-100 rounded-lg border border-slate-200 transition-colors disabled:opacity-50 text-left shrink-0 cursor-pointer"
             >
               {q}
             </button>
@@ -82,7 +82,7 @@ export default function GitAIAssistant({
       <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[440px]">
         {chatHistory.length === 0 ? (
           <div className="text-center py-10 max-w-xs mx-auto space-y-3">
-            <span className="p-3 bg-indigo-50/50 rounded-full text-indigo-600 inline-block">
+            <span className="p-3 bg-emerald-50/50 rounded-full text-emerald-600 inline-block">
               <MessageSquare className="w-6 h-6" />
             </span>
             <h4 className="font-sans font-semibold text-slate-800 text-sm">Pregúntame lo que quieras de Git</h4>
@@ -99,14 +99,14 @@ export default function GitAIAssistant({
                 className={`flex gap-2.5 ${isUser ? "justify-end" : "justify-start"}`}
               >
                 {!isUser && (
-                  <div className="w-7 h-7 rounded-lg bg-indigo-100 font-mono font-black text-indigo-700 flex items-center justify-center shrink-0 text-xs">
+                  <div className="w-7 h-7 rounded-lg bg-emerald-100 font-mono font-black text-emerald-700 flex items-center justify-center shrink-0 text-xs">
                     G
                   </div>
                 )}
                 
                 <div className={`max-w-[85%] rounded-2xl p-3.5 text-xs font-sans leading-relaxed ${
                   isUser 
-                    ? "bg-indigo-600 text-white rounded-tr-none" 
+                    ? "bg-emerald-600 text-white rounded-tr-none" 
                     : "bg-slate-100 text-slate-900 rounded-tl-none border border-slate-200"
                 }`}>
                   <div className="whitespace-pre-line prose-sm select-text">
@@ -120,7 +120,7 @@ export default function GitAIAssistant({
                   )}
 
                   <span className={`block text-[9px] text-right mt-1 font-mono ${
-                    isUser ? "text-indigo-200" : "text-slate-400"
+                    isUser ? "text-emerald-200" : "text-slate-400"
                   }`}>
                     {msg.timestamp}
                   </span>
@@ -132,7 +132,7 @@ export default function GitAIAssistant({
 
         {isLoading && (
           <div className="flex gap-2.5 justify-start items-center">
-            <div className="w-7 h-7 rounded-lg bg-indigo-100 font-mono font-black text-indigo-700 flex items-center justify-center shrink-0 text-xs animate-spin">
+            <div className="w-7 h-7 rounded-lg bg-emerald-100 font-mono font-black text-emerald-700 flex items-center justify-center shrink-0 text-xs animate-spin">
               <Loader className="w-3.5 h-3.5" />
             </div>
             <div className="bg-slate-50 text-slate-500 text-xs font-sans rounded-2xl px-3 py-2 italic flex items-center gap-1.5">
@@ -150,13 +150,13 @@ export default function GitAIAssistant({
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Escribe tu pregunta de Git... (ej. ¿Qué es HEAD?)"
-          className="flex-1 p-2 bg-white rounded-xl border border-slate-200 text-slate-800 font-sans text-xs focus:outline-hidden focus:ring-1 focus:ring-indigo-500 placeholder:text-slate-400"
+          className="flex-1 p-2 bg-white rounded-xl border border-slate-200 text-slate-800 font-sans text-xs focus:outline-hidden focus:ring-1 focus:ring-emerald-500 placeholder:text-slate-400"
           disabled={isLoading}
         />
         <button
           type="submit"
           disabled={isLoading || !input.trim()}
-          className="p-2 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white rounded-xl transition-colors cursor-pointer"
+          className="p-2 bg-emerald-600 hover:bg-emerald-700 disabled:opacity-50 text-white rounded-xl transition-colors cursor-pointer"
         >
           <Send className="w-4 h-4" />
         </button>
